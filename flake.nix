@@ -123,7 +123,8 @@
           };
           */
         };
-        defaultApp = self.apps."${system}".nix-gui;
+       
+        apps.default = self.apps."${system}".nix-gui;
 
         devShell = pkgs.mkShell {
           QT_PLUGIN_PATH = "${pkgs.qt5.qtbase}/${pkgs.qt5.qtbase.qtPluginPrefix}";
